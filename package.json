@@ -1,0 +1,27 @@
+{
+  "name": "googlechartssprint",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bizzmichelson/googlechartssprint.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bizzmichelson/googlechartssprint/issues"
+  },
+  "homepage": "https://github.com/bizzmichelson/googlechartssprint#readme",
+  "dependencies": {
+    "angular": "^1.6.6",
+    "angular-chart.js": "^1.1.1",
+    "chart.js": "^2.7.0",
+    "express": "^4.16.2"
+  },
+  "devDependencies": {},
+  "description": ""
+}
