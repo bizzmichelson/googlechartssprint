@@ -3,11 +3,11 @@
 
 angular.module("app", ["chart.js"]).controller("LineCtrl", function ($scope) {
     
-      $scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
+      $scope.labels = ["1991", "1995", "2000", "2010", "2015", "2020"],
       $scope.series = ['Series A', 'Series B'];
       $scope.data = [
-        [65, 59, 80, 81, 56, 55, 40],
-        [28, 48, 40, 19, 86, 27, 90]
+        [0, 5, 5, 2, 10, 8, 7],
+        [5, 5, 5]
       ];
       $scope.onClick = function (points, evt) {
         console.log(points, evt);
