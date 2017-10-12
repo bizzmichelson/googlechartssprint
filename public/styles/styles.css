@@ -7,3 +7,5 @@ chart-click (optional): onclick event handler
 chart-hover (optional): onmousemove event handler
 chart-colors (default to global colors): colors for the chart
 chart-dataset-override (optional): override datasets individually
+
+Chart.defaults.global.colors

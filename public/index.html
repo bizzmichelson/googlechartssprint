@@ -5,18 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="vendors/angular.min.js" charset="utf-8"></script>
     <!-- <script src="vendors/angular-route.min.js" charset="utf-8"></script> -->
-    <!-- <script src="scripts/client.js" charset="utf-8"></script> -->
+    <script src="scripts/chart.js" charset="utf-8"></script>
     <script src="vendors/Chart.min.js"></script>
     <script src="vendors/angular-chart.min.js"></script>
     <link rel="stylesheet" href="styles/styles.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <canvas id="line" class="chart chart-line" chart-data="data"
-    chart-labels="labels" chart-series="series" chart-options="options"
-    chart-dataset-override="datasetOverride" chart-click="onClick">
-</canvas>
+   
     <title> Chart Sprint </title>
 </head>
 <body>
-    
+    <body ng-app="app">
+            <canvas id="line" class="chart chart-line" chart-data="data"
+            chart-labels="labels" chart-series="series" chart-options="options"
+            chart-dataset-override="datasetOverride" chart-click="onClick">
+        </canvas>
+        <h1>Chart Sprint</h1>
+
+
+        <main ng-view>
+            
+        </main>
 </body>
 </html>															
