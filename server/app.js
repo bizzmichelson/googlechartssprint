@@ -2,6 +2,18 @@ var express = require('express');
 var path = require('path');
 var app = express();
 var port = process.env.PORT || 5000;
+var router = express.Router();
+var Pool = require("pg").Pool;
+
+var config = {
+  host: "localhost", // where does the db server live
+  port: 5432, // what port is it listening on - 5432 default
+  database: "tasks",
+  max: 20 // number of clients in the pool
+};
+
+// ourPool is an instance of a pool that knows our configuration
+
 
 app.use(express.static('public'));
 
@@ -13,21 +25,8 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
-// (function () {
-//   'use strict';
+var ourPool = new Pool(config);
 
-//   var app = angular.module('examples', ['chart.js', 'ui.bootstrap']);
+console.log("connected to DB");
 
-//   app.config(function (ChartJsProvider) {
-//     // Configure all charts
-//     ChartJsProvider.setOptions({
-//       colors: ['#97BBCD', '#DCDCDC', '#F7464A', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360']
-//     });
-//     // Configure all doughnut charts
-//     ChartJsProvider.setOptions('doughnut', {
-//       cutoutPercentage: 60
-//     });
-//     ChartJsProvider.setOptions('bubble', {
-//       tooltips: { enabled: false }
-//     });
-//   });
+module.exports = ourPool;

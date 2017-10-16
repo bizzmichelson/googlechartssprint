@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="vendors/angular.min.js" charset="utf-8"></script>
     <!-- <script src="vendors/angular-route.min.js" charset="utf-8"></script> -->
-    <script src="scripts/chart.js" charset="utf-8"></script>
+    <script src="routes/chart.js" charset="utf-8"></script>
     <script src="vendors/Chart.min.js"></script>
     <script src="vendors/angular-chart.min.js"></script>
     <link rel="stylesheet" href="styles/styles.css">
@@ -13,21 +13,8 @@
    
     <title> Chart Sprint </title>
 </head>
-<body>
-    <body ng-app="app">
-            <h1>Chart Sprint</h1>
-            <div ng-controller="LineCtrl">
-                    
-            <canvas id="line" class="chart chart-line" chart-data="data"
-            chart-labels="labels" chart-series="series" chart-options="options"
-            chart-dataset-override="datasetOverride" chart-click="onClick">
-        </canvas>
-    </div>
-      
-
-
+    <body>
         <main ng-view>
-            
         </main>
-</body>
+    </body>
 </html>															
