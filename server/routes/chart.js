@@ -1,25 +1,25 @@
-var myApp = angular.module('myModule', ['chart.js']);
+// var myApp = angular.module('myModule', ['chart.js']);
 
-var express = require("express");
-var router = express.Router();
-var pool = require("../modules/pool");
-var pg = require('pg');
+// var express = require("express");
+// var router = express.Router();
+// var pool = require("../modules/pool");
+// var pg = require('pg');
 // var saleSchema = require('../models/rentModel');
 
 
 // var saleModel = mongoose.model('listing', saleSchema);
 
-router.get('/', function(req, res){
-    console.log('/sale gotten');
-    Sales.find({cost:{$exists:true}}).then(function(data) {
-        res.send(data);
-    }).catch(function(err){
-        console.log(err);
-        res.sendStatus(404);
-    })
-});
+// router.get('/', function(req, res){
+//     console.log('/sale gotten');
+//     // Sales.find({cost:{$exists:true}}).then(function(data) {
+//     //     res.send(data);
+//     // }).catch(function(err){
+//     //     console.log(err);
+//     //     res.sendStatus(404);
+//     // })
+// });
 
-module.exports = router;
+// module.exports = router;
 
 
 angular.module("app", ["chart.js"]).controller("LineCtrl", function ($scope) {

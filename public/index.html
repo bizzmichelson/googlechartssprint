@@ -4,17 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="vendors/angular.min.js" charset="utf-8"></script>
-    <!-- <script src="vendors/angular-route.min.js" charset="utf-8"></script> -->
-    <script src="routes/chart.js" charset="utf-8"></script>
+    <script src="vendors/angular-route.min.js" charset="utf-8"></script>
+    <script src="scripts/client.js" charset="utf-8"></script>
+    <script src="controllers/basics.controller.js"></script>
     <script src="vendors/Chart.min.js"></script>
-    <script src="vendors/angular-chart.min.js"></script>
     <link rel="stylesheet" href="styles/styles.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
    
     <title> Chart Sprint </title>
 </head>
-    <body>
+
+    <body ng-app="myApp">
+        <nav>
         <main ng-view>
+            <h1> Welcome to Life Tracker! </h1>
+                <h2> Click the 'Start' button below to begin.</h2>
+                <button><a href="#!/basics">start</a></button>
+        </nav>
+        <ng-view></ng-view>
+                    
         </main>
     </body>
 </html>															
