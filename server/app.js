@@ -8,7 +8,7 @@ var Pool = require("pg").Pool;
 var config = {
   host: "localhost", // where does the db server live
   port: 5432, // what port is it listening on - 5432 default
-  database: "tasks",
+  database: "solo_project",
   max: 20 // number of clients in the pool
 };
 
@@ -23,13 +23,6 @@ app.listen(port, function () {
   console.log('localhost running on port', port);
 });
 
-// app.get('/', function(req, res) {
-//   res.sendFile(path.join(__dirname, '../public/index.html'));
-// });
-
-// app.get('/basics', function (req, res) {
-//   console.log('go to basics');
-// });
 
 var ourPool = new Pool(config);
 
