@@ -23,9 +23,9 @@ app.listen(port, function () {
   console.log('localhost running on port', port);
 });
 
-app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, '../public/index.html'));
-});
+// app.get('/', function(req, res) {
+//   res.sendFile(path.join(__dirname, '../public/index.html'));
+// });
 
 // app.get('/basics', function (req, res) {
 //   console.log('go to basics');
