@@ -14,5 +14,17 @@ myApp.config(function($routeProvider) {
     }).when('/chart', {
         templateUrl: 'views/chart.html',
         controller: 'ChartController as cc'
+    }).when('/options', {
+        templateUrl: 'views/options.html',
+        controller: 'OptionsController as oc'
+    }).when('/addHigh', {
+        templateUrl: 'views/addHigh.html',
+        controller: 'HighController as hc'
+    }).when('/addLow', {
+        templateUrl: 'views/addLow.html',
+        controller: 'LowController as lc'
+    }).when('/addEvents', {
+        templateUrl: 'views/addEvents.html',
+        controller: 'addEventsController as ac'
     }).otherwise({ redirectTo: '/'});
 });
