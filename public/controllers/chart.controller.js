@@ -1,37 +1,46 @@
 // var app = angular.module('app', ['chart.js']);
 
-myApp.controller('ChartController', function($scope) {
+myApp.controller('ChartController', function() {
  
     console.log('in chart controller');
-
-      $scope.labels = ["1991", "1995", "2000", "2010", "2015", "2020"],
-      $scope.series = ['Series A', 'Series B'];
-      $scope.data = [
-        [0, 5, 5, 2, 10, 8, 7],
-        [5, 5, 5, 5, 5]
-      ];
-      $scope.onClick = function (points, evt) {
-        console.log(points, evt);
-      };
-      $scope.datasetOverride = [{ yAxisID: 'y-axis-1' }, { yAxisID: 'y-axis-2' }];
-      $scope.options = {
-        scales: {
-          yAxes: [
-            {
-              id: 'y-axis-1',
-              type: 'linear',
-              display: true,
-              position: 'left'
-            },
-            {
-              id: 'y-axis-2',
-              type: 'linear',
-              display: true,
-              position: 'right'
+    var ctx = document.getElementById("myChart");
+    console.log(ctx);
+    var myChart = new Chart(ctx, {
+           
+        type: 'line',
+        data: {
+            labels: ["", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            datasets: [{
+                // label: '# of Votes',
+                data: [5, 10, 3, 5, 2, 3],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }]
             }
-          ]
         }
-      };
     });
-
+});
 

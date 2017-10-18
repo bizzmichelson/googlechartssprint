@@ -4,7 +4,8 @@ var app = express();
 var port = process.env.PORT || 5000;
 var router = express.Router();
 var Pool = require("pg").Pool;
-// var materials = require('angular-material');
+var Chart = require('chart.js');
+var ctx = "myChart";
 
 var config = {
   host: "localhost", // where does the db server live
