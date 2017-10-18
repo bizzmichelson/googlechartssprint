@@ -34,9 +34,19 @@ button {
     border-bottom: 1px solid #333333;
     border-left: 1px solid #CCCCCC;
     underline-style: none; */
-    .btn-success
+    btn-success
     
 }
+
+.chart-line 
+    chart-data: series data;
+    chart-labels: x axis labels;
+     chart-options (default: {}): Chart.js options
+     chart-series (default: []): series labels
+     chart-click (optional): onclick event handler
+     chart-hover (optional): onmousemove event handler
+     chart-colors (default to global colors): colors for the chart
+     chart-dataset-override (optional): override datasets individually
 
 
 
