@@ -1,3 +1,6 @@
+// angular.module( 'YourApp', [ 'ngMaterial' ], ['chart.js'] )
+// .controller("YourController", YourController );
+
 var myApp = angular.module('myApp', ['ngRoute']);
 
 myApp.config(function($routeProvider) {

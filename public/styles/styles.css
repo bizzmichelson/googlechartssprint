@@ -1,4 +1,47 @@
-.chart-line 
+body{
+    background-color: rgb(205, 230, 255);
+}
+
+h1 {
+    color: blueviolet;
+    font-family: Calibri;
+}
+
+h2{
+    color: blue;
+}
+
+h3{
+    color: olive;
+}
+
+h4{
+    color: tomato;
+}
+button {
+    font: bold 11px Arial;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+    underline-style: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .chart-line 
 chart-data: series data;
 chart-labels: x axis labels;
 chart-options (default: {}): Chart.js options
@@ -10,4 +53,4 @@ chart-dataset-override (optional): override datasets individually
 
 .chart-line{
     Chart.defaults.global.colors;
-}
+} */
