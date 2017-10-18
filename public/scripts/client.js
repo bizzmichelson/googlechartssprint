@@ -28,3 +28,36 @@ myApp.config(function($routeProvider) {
         controller: 'addEventsController as ac'
     }).otherwise({ redirectTo: '/'});
 });
+
+// app.controller('BasicsController', function (BasicsService) {
+//     var vm = this;
+//     // vm.testThingy = 'This is only a test';
+//     // vm.serviceTestThingy = PropertiesService.serviceMessage;
+//     vm.rentalProperties = PropertiesService.rentalProperties;
+//     PropertiesService.getRentalProperties();
+// });
+
+// app.service('BasicsService', function ($http) {
+//     var self = this;
+//     // self.serviceMessage = "This message brought to you by the service";
+//     self.allProperties = { list: [] };
+//     self.rentalProperties = {list: []};
+
+//     self.getAllProperties = function () {
+//         $http({
+//             method: 'GET',
+//             url: '/all'
+//         }).then(function (response) {
+//             self.allProperties.list = response.data;
+//         })
+//     }
+
+//     self.getRentalProperties = function () {
+//         $http({
+//             method: 'GET',
+//             url: '/rental'
+//         }).then(function (response) {
+//             self.rentalProperties.list = response.data;
+//         })
+//     }
+// });

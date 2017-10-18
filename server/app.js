@@ -5,7 +5,9 @@ var port = process.env.PORT || 5000;
 var router = express.Router();
 var Pool = require("pg").Pool;
 var Chart = require('chart.js');
+var Basics = require('./routes/basics');
 var ctx = "myChart";
+var bodyParser = require('body-parser');
 
 var config = {
   host: "localhost", // where does the db server live
@@ -19,7 +21,7 @@ var config = {
 
 app.use(express.static('public'));
 
-
+app.use('/basics', )
 
 app.listen(port, function () {
   console.log('localhost running on port', port);

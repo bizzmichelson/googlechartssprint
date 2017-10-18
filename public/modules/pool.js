@@ -1,11 +1,11 @@
-// var express = require('express');
+// var express = require("express");
 // var router = express.Router();
-// var Pool = require('pg').Pool;
+// var Pool = require("pg").Pool;
 
 // var config = {
-//   host: 'localhost', // where does the db server live
+//   host: "localhost", // where does the db server live
 //   port: 5432, // what port is it listening on - 5432 default
-//   database: 'solo_project',
+//   database: "tasks",
 //   max: 20 // number of clients in the pool
 // };
 

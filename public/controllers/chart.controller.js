@@ -9,7 +9,7 @@ myApp.controller('ChartController', function() {
            
         type: 'line',
         data: {
-            labels: ["", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            labels: ["1991", "2000", "2005", "2010", "2015", "2017"],
             datasets: [{
                 // label: '# of Votes',
                 data: [5, 10, 3, 5, 2, 3],
@@ -33,6 +33,7 @@ myApp.controller('ChartController', function() {
             }]
         },
         options: {
+            responsive: false,            
             scales: {
                 yAxes: [{
                     ticks: {

@@ -3,10 +3,6 @@ var router = express.Router();
 var pool = require("../modules/pool");
 
 
-
-
-
-
 router.post("/basics", function(req, res) {
     console.log(req.body);
     console.log("post body", req.body.born);
