@@ -1,14 +1,16 @@
 body{
     background-color: rgb(205, 230, 255);
+    padding: 20px;
+    margin: 20px;
 }
 
 h1 {
-    color: blueviolet;
+    color: gray;
     font-family: Calibri;
 }
 
 h2{
-    color: blue;
+    color: navy;
 }
 
 h3{
@@ -19,7 +21,7 @@ h4{
     color: tomato;
 }
 button {
-    font: bold 11px Arial;
+    /* font: bold 11px Arial;
     text-decoration: none;
     background-color: #EEEEEE;
     color: #333333;
@@ -28,8 +30,11 @@ button {
     border-right: 1px solid #333333;
     border-bottom: 1px solid #333333;
     border-left: 1px solid #CCCCCC;
-    underline-style: none;
+    underline-style: none; */
+    .btn-success
+    
 }
+
 
 
 

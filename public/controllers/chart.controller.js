@@ -3,24 +3,25 @@
     angular.module('myApp').controller('ChartController', ChartController);
  //passing service to controller
     ChartController.$inject = ['chart.js'];
+  });
   
-    function ChartController(ChartService) {
-      const $ctrl = this;
-      ChartService.getChart()
-        .then(function(response) {
-          console.log('it worked?');
-    //       // The same as
-    //       // const data = response.data;
-    //       // just a shorter syntax.
-    //       const { data } = response;
-    //       return ($ctrl.listings = data);
-    //     })
-    //     .catch(function(err) {
-    //       // If you do a .then(), always do a .catch() after it, to handle errors.
-    //       return console.error('Error fetching data from database ', err);
-    //     });
-     })
-    };
+    // function ChartController(ChartService) {
+    //   const $ctrl = this;
+    //   ChartService.getChart()
+    //     .then(function(response) {
+    //       console.log('it worked?');
+    // //       // The same as
+    // //       // const data = response.data;
+    // //       // just a shorter syntax.
+    // //       const { data } = response;
+    // //       return ($ctrl.listings = data);
+    // //     })
+    // //     .catch(function(err) {
+    // //       // If you do a .then(), always do a .catch() after it, to handle errors.
+    // //       return console.error('Error fetching data from database ', err);
+    // //     });
+    //  })
+    // };
 
 
 
