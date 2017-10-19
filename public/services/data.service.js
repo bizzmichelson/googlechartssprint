@@ -1,35 +1,56 @@
-// myApp.service('ChartService', ['chart.js',function($scope) {
+myApp.service('dataService', ['$http',function($http) {
+    console.log('data.service works');
     
-       
-//        console.log('in chart controller');
-       
-//          $scope.labels = ["1991", "1995", "2000", "2010", "2015", "2020"],
-//          $scope.series = ['Series A', 'Series B'];
-//          $scope.data = [
-//            [0, 5, 5, 2, 10, 8, 7],
-//            [5, 5, 5, 5, 5]
-//          ];
-//          $scope.onClick = function (points, evt) {
-//            console.log(points, evt);
-//          };
-//          $scope.datasetOverride = [{ yAxisID: 'y-axis-1' }, { yAxisID: 'y-axis-2' }];
-//          $scope.options = {
-//            scales: {
-//              yAxes: [
-//                {
-//                  id: 'y-axis-1',
-//                  type: 'linear',
-//                  display: true,
-//                  position: 'left'
-//                },
-//                {
-//                  id: 'y-axis-2',
-//                  type: 'linear',
-//                  display: true,
-//                  position: 'right'
-//                }
-//              ]
-//            }
-//          };
-//        }]);
+    var rs = this;
+    
+
+    rs.postBasics = function() {
+        console.log('postbasics start');
+         $http({
+             method: 'POST',
+             url: '/basics',
+             data: {
+                 born: bc.bornIn, 
+                 basicHighDesc: bc.basicHighDescriptionIn,
+                 basicHighYear: bc.basicHighYearIn, 
+                 basicLowDesc: bc.basicLowDescriptionIn, 
+                 basicLowYear: bc.basicLowYearIn
+             }
+         }).then(function(response){
+             console.log('in post basics', response);
+         })
+     
+     }
+    }])
+
+
+    //     };
+    //     // var to hold value from form
+      
+    //     console.log("addTasks", itemToAdd);
+      
+        // var to holding data we want to send to the server
+      
+    //     $.ajax({
+    //       type: "POST",
+    //       url: "/todo/add",
+    //       data: itemToAdd,
+    //       success: function() {
+    //         //change background in here? something with td
+    //         //need something else
+    //         return getTasks();
+    //       }
+    //     });
+    //   }
+
+    // console.log('data service');
+
+  
+    // rs.getSales = function() {
+    //     return $http({
+    //         method: 'GET',
+    //         url: '/properties/sale'
+    //     })
+    // }
+
   

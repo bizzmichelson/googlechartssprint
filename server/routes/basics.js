@@ -1,9 +1,9 @@
 var express = require("express");
 var router = express.Router();
-var pool = require("../modules/pool");
+// var pool = require("../modules/pool");
 
 
-router.post("/basics", function(req, res) {
+router.post("/", function(req, res) {
     console.log(req.body);
     console.log("post body", req.body.born);
     var post = req.body.born;
@@ -17,7 +17,7 @@ router.post("/basics", function(req, res) {
       } else {
         // client.query
         // parameterized queries
-        client.query("INSERT INTO born (year) VALUES ($1);", [post], function(
+        client.query("INSERT INTO dynamic (point_type, date) VALUES ('birth', $1);", [post], function(
           queryError,
           result
         ) {
@@ -34,3 +34,4 @@ router.post("/basics", function(req, res) {
       }
     });
   });
+  module.exports = router;
