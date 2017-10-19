@@ -1,6 +1,6 @@
 var express = require("express");
 var router = express.Router();
-// var pool = require("../modules/pool");
+var pool = require("../../public/modules/pool.js");
 
 
 router.post("/", function(req, res) {

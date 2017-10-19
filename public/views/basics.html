@@ -2,13 +2,13 @@
     <h2> When were you born? </h2>
         <section id="inputArea">
             <!-- <input id="description" type="text" placeholder="description"> -->
-            <input id="born" ng-model ="bornIn" type="text" placeholder="year">
+            <input id="born" ng-model ="bc.bornIn" type="text" placeholder="year">
         </section>
     <h3> What was the happiest time of your life?</h3>
-            <input id="basicHighDescription" ng-model="basicHighDescriptionIn" type="text" placeholder="description">
-            <input id="basicHighYear" ng-model="basicHighYearIn" type="text" placeholder="year">
+            <input id="basicHighDescription" ng-model="bc.basicHighDescriptionIn" type="text" placeholder="description">
+            <input id="basicHighYear" ng-model="bc.basicHighYearIn" type="text" placeholder="year">
     <h4> What was the worst time of your life?<h4>
-            <input id="basicLowDescription" ng-model="basicLowDescriptionIn" type="text" placeholder="description">
-            <input id="basicLowYear" ng-model="basicLowYearIn" type="text" placeholder="year">
-            <br><br><button ng-click="bc.postBasics"><a href="/#!events">submit</a></button></br></br>   
+            <input id="basicLowDescription" ng-model="bc.basicLowDescriptionIn" type="text" placeholder="description">
+            <input id="basicLowYear" ng-model="bc.basicLowYearIn" type="text" placeholder="year">
+            <br><br><button ng-click="bc.click()"><a href="/#!events">submit</a></button></br></br>   
             
