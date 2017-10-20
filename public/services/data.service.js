@@ -15,6 +15,17 @@ myApp.service('dataService', ['$http', function($http) {
          })
      
      }
+
+     rs.postEvents = function(eventsObject) {
+         console.log(eventsObject);
+         $http({
+             method: 'POST', 
+             url: '/events',
+             data: eventsObject
+         }).then(function(response){
+             console.log('in post events', response);
+         })
+     }
     }])
 
 

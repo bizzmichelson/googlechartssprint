@@ -3,14 +3,6 @@ var router = express.Router();
 var pool = require("../../public/modules/pool.js");
 
   router.post("/", function(req, res) {
-    console.log(req.body);
-    console.log("post body", req.body.born);
-    var born = req.body.born;
-    var highDesc = req.body.basicHighDesc;
-    var highDate = req.body.basicHighYear;
-    var lowDesc = req.body.basicLowDesc;
-    var lowDate = req.body.basicLowYear;
-    
   
     // pool.connect
     pool.connect(function(connectionError, client, done) {
