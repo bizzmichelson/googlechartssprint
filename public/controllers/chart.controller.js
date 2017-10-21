@@ -9,10 +9,12 @@ myApp.controller('ChartController', function() {
            
         type: 'line',
         data: {
-            labels: ["1991", "2000", "2005", "2010", "2015", "2017"],
-            datasets: [{
+            labels: ["1991, cool", "2000, high", "2005, low", "2010", "2015", "2017"],
+            datasets: [
+                {
                 // label: '# of Votes',
-                data: [5, 10, 3, 5, 2, 3],
+                data: [0, 5, 10, 5],
+                // label: ["born", "wedding"],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
@@ -30,8 +32,9 @@ myApp.controller('ChartController', function() {
                     'rgba(255, 159, 64, 1)'
                 ],
                 borderWidth: 1
-            }]
-        },
+            },]
+            
+    },
         options: {
             responsive: false,            
             scales: {
