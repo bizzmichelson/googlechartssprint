@@ -14,6 +14,7 @@ myApp.controller('EventsController', function($http, dataService) {
     
     //not sure if should be resObj
     //something is wrong here
+    //the problem is here
 
       dataService.getEvents(resObj).then(function(response){
       vm.resObj = response.data;
