@@ -12,11 +12,11 @@ myApp.controller('EventsController', function($http, dataService) {
     //something is wrong here
     //the problem is here
 
-      dataService.getEvents(resObj).then(function(response){
-      vm.resObj = response.data;
-      }).catch(function(err){
-      return console.error(err);
-  })  
+      // dataService.getEvents(resObj).then(function(response){
+      // vm.resObj = response.data;
+      // }).catch(function(err){
+      // return console.error(err);
+  // })  
 
   
 });

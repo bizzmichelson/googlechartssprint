@@ -5,6 +5,7 @@ var port = process.env.PORT || 5000;
 var router = express.Router();
 var basics = require('./routes/basics');
 var events = require('./routes/events');
+var chart = require('./routes/chart');
 var bodyParser = require('body-parser');
 
 
@@ -16,6 +17,8 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 app.use('/api/basics', basics);
 app.use('/api/events', events);
+app.use('/api/chart', chart);
+
 
 app.listen(port, function () {
   console.log('localhost running on port', port);

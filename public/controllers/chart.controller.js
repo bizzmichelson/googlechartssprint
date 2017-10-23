@@ -1,20 +1,31 @@
 myApp.controller('ChartController', function(dataService) {
- 
-    console.log('in chart controller');
-    var ctx = document.getElementById("myChart");
-
-    var 
+    var vm = this;
+    console.log(dataService);
     
+    console.log('in chart controller');
+    dataService.getEvents().then(function(response){
+        console.log(response.data);
+        console.log("res.Obj", resObj);
+        
+        return vm.resObj = response.data;
+        // return resObj;
+        }).catch(function(err) {
+        return console.error('Error fetching data from database ', err);
+      });
+
+
+    
+    var ctx = document.getElementById("myChart");    
     console.log(ctx);
     var myChart = new Chart(ctx, {
            
         type: 'line',
         data: {
-            labels: ["1991, cool", "2000, high", "2005, low", "2010", "2015", "2017"],
+            labels: [vm.resObj.born, "2000, high", "2005, low", "2010", "2015", "2017"],
             datasets: [
                 {
                 // label: '# of Votes',
-                data: [0, 5, 10, 5],
+                data: [0, response.data.basicHighDesc, 10, 5],
                 // label: ["born", "wedding"],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',

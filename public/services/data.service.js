@@ -38,13 +38,11 @@ myApp.service('dataService', ['$http', '$location', function($http, $location) {
      // Maybe eventsObject should have a different name??? 
      ds.getEvents = function() {
         console.log();
-        $http({
+        return $http({
             method: 'GET', 
-            url: '/api/events',
+            url: '/api/chart',
+            //changed url to chart...should be in events?
             //I am not sure if this is the correct url
-        }).then(function(response){
-            console.log('in get basics', response);
-            return response.data;
         })
     }
 
