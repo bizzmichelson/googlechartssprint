@@ -1,6 +1,7 @@
 myApp.controller('ChartController', function(dataService) {
     var vm = this;
     var resObj = [];
+    resObj.sort();
     // var roots = numbers.map(Math.sqrt);
 
     // var fruit = ['cherries', 'apples', 'bananas'];
@@ -25,7 +26,7 @@ var drawLineChart = function(resObj) {
            
         type: 'line',
         data: {
-            labels: [vm.resObj[0].date, vm.resObj[1].date, vm.resObj[2].date],
+            labels: [ [vm.resObj[0].description, vm.resObj[0].date], [vm.resObj[1].description,vm.resObj[1].date], [vm.resObj[2].description,vm.resObj[2].date]],                 
             datasets: [
                 {
                 // label: '# of Votes',
