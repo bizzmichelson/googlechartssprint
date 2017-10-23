@@ -41,8 +41,6 @@ myApp.service('dataService', ['$http', '$location', function($http, $location) {
         return $http({
             method: 'GET', 
             url: '/api/chart',
-            //changed url to chart...should be in events?
-            //I am not sure if this is the correct url
         })
     }
 
@@ -54,14 +52,6 @@ myApp.service('dataService', ['$http', '$location', function($http, $location) {
     //     }
     // }
 
-
-    //  function addData(chart, label, data) {
-    //     chart.data.labels.push(label);
-    //     chart.data.datasets.forEach((dataset) => {
-    //         dataset.data.push(data);
-    //     });
-    //     chart.update();
-    // }
     }])
 
 

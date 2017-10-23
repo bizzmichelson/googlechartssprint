@@ -19,7 +19,7 @@ var pool = require("../../public/modules/pool.js");
         res.sendStatus(500);
       } else {
         // client.query
-        client.query("INSERT INTO dynamic (point_type, description, date) VALUES ('born', null, $1), ('high', $2, $3), ('low', $4, $5);", [req.body.born, req.body.basicHighDesc, req.body.basicHighYear, req.body.basicLowDesc, req.body.basicLowYear], function(
+        client.query("INSERT INTO dynamic (point_type, description, date) VALUES (0, 'born', $1), (10, $2, $3), (1, $4, $5);", [req.body.born, req.body.basicHighDesc, req.body.basicHighYear, req.body.basicLowDesc, req.body.basicLowYear], function(
           queryError,
           result
         ) {

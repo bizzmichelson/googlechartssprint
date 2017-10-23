@@ -1,29 +1,22 @@
 myApp.controller('ChartController', function(dataService) {
     var vm = this;
     var resObj = [];
+    // var roots = numbers.map(Math.sqrt);
+
+    // var fruit = ['cherries', 'apples', 'bananas'];
+    // fruit.sort(); // ['apples', 'bananas', 'cherries']
     console.log(dataService);
     
     console.log('in chart controller');
     dataService.getEvents().then(function(response){
         console.log(response.data);
         // console.log("res.Obj", resObj);
-       
-            // return console.error('Error fetching data from database ', err);
         vm.resObj = response.data;  
         // return vm.resObj;
         drawLineChart(resObj);
-        
+        console.log('vm.resObj', vm.resObj)
         })
        
-        // return resObj;
-        // .then(function() {
-        //     drawLineChart()
-            
-    // });
-
-    //   .then drawVisualization().
-
-
 var drawLineChart = function(resObj) {
 
     var ctx = document.getElementById("myChart");    
@@ -32,11 +25,11 @@ var drawLineChart = function(resObj) {
            
         type: 'line',
         data: {
-            labels: [vm.resObj[0].born, "2000, high", "2005, low", "2010", "2015", "2017"],
+            labels: [vm.resObj[0].date, vm.resObj[1].date, vm.resObj[2].date],
             datasets: [
                 {
                 // label: '# of Votes',
-                data: [0, resObj.basicHighDesc, 10, 5],
+                data: [vm.resObj[0].point_type, vm.resObj[1].point_type, vm.resObj[2].point_type],
                 // label: ["born", "wedding"],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
@@ -70,7 +63,6 @@ var drawLineChart = function(resObj) {
         }
     })
 }
-// drawLineChart();
 });
 
 
