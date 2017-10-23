@@ -2,15 +2,11 @@ myApp.controller('EventsController', function($http, dataService) {
   var vm = this;
   
       vm.clicky = function (){
-        vm.eventsObject = {
-          eventsOneDesc: vm.sigEventOneDescIn,
-          eventsOneYear: vm.sigEventOneYearIn, 
-          eventsTwoDesc: vm.sigEventTwoDescIn, 
-          eventsTwoYear: vm.sigEventTwoYearIn
-      }
-      console.log('Events', vm.eventsObject);
+        dataService.postEvents(vm.input)
+      };
+      // console.log('Events', vm.input);
       
-      dataService.postEvents(vm.eventsObject);
+      
     
     //not sure if should be resObj
     //something is wrong here
@@ -21,7 +17,6 @@ myApp.controller('EventsController', function($http, dataService) {
       }).catch(function(err){
       return console.error(err);
   })  
-}
 
   
 });

@@ -18,7 +18,7 @@ var pool = require("../../public/modules/pool.js");
         res.sendStatus(500);
       } else {
         // client.query
-        client.query("INSERT INTO significant_event (description, date) VALUES ($1, $2), ($3, $4);", [req.body.eventsOneDesc, req.body.eventsOneYear, req.body.eventsTwoDesc, req.body.eventsTwoYear], function(
+        client.query("INSERT INTO significant_event (description, date) VALUES ($1, $2), ($3, $4);", [req.body.sigEventOneDesc, req.body.sigEventOneYear, req.body.sigEventTwoDesc, req.body.sigEventTwoYear], function(
           queryError,
           result
         ) {
@@ -36,24 +36,24 @@ var pool = require("../../public/modules/pool.js");
     });
   });
 
-  router.get('/', function(req, res) {
-    console.log("inside GET function");
-    pool.connect(function(err, client, done) {
-      if (err) {
-        res.sendStatus(500);
-      } else {
-        client.query("SELECT * FROM significant_event", function(err, resObj) {
-          // done();
-          if (err) {
-            res.sendStatus(500);
-          } else {
-            console.log(resObj.rows);
-            res.send(resObj.rows);
-          }
-        });
-      }
-    });
-  });
+  // router.get('/', function(req, res) {
+  //   console.log("inside GET function");
+  //   pool.connect(function(err, client, done) {
+  //     if (err) {
+  //       res.sendStatus(500);
+  //     } else {
+  //       client.query("SELECT * FROM significant_event", function(err, resObj) {
+  //         // done();
+  //         if (err) {
+  //           res.sendStatus(500);
+  //         } else {
+  //           console.log(resObj.rows);
+  //           res.send(resObj.rows);
+  //         }
+  //       });
+  //     }
+  //   });
+  // });
 
  
   

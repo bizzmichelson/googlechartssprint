@@ -1,9 +1,10 @@
-// var app = angular.module('app', ['chart.js']);
-
-myApp.controller('ChartController', function() {
+myApp.controller('ChartController', function(dataService) {
  
     console.log('in chart controller');
     var ctx = document.getElementById("myChart");
+
+    var 
+    
     console.log(ctx);
     var myChart = new Chart(ctx, {
            
