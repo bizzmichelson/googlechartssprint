@@ -1,31 +1,42 @@
 myApp.controller('ChartController', function(dataService) {
     var vm = this;
+    var resObj = [];
     console.log(dataService);
     
     console.log('in chart controller');
     dataService.getEvents().then(function(response){
         console.log(response.data);
-        console.log("res.Obj", resObj);
+        // console.log("res.Obj", resObj);
+       
+            // return console.error('Error fetching data from database ', err);
+        vm.resObj = response.data;  
+        // return vm.resObj;
+        drawLineChart(resObj);
         
-        return vm.resObj = response.data;
+        })
+       
         // return resObj;
-        }).catch(function(err) {
-        return console.error('Error fetching data from database ', err);
-      });
+        // .then(function() {
+        //     drawLineChart()
+            
+    // });
+
+    //   .then drawVisualization().
 
 
-    
+var drawLineChart = function(resObj) {
+
     var ctx = document.getElementById("myChart");    
     console.log(ctx);
     var myChart = new Chart(ctx, {
            
         type: 'line',
         data: {
-            labels: [vm.resObj.born, "2000, high", "2005, low", "2010", "2015", "2017"],
+            labels: [vm.resObj[0].born, "2000, high", "2005, low", "2010", "2015", "2017"],
             datasets: [
                 {
                 // label: '# of Votes',
-                data: [0, response.data.basicHighDesc, 10, 5],
+                data: [0, resObj.basicHighDesc, 10, 5],
                 // label: ["born", "wedding"],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
@@ -46,7 +57,7 @@ myApp.controller('ChartController', function(dataService) {
                 borderWidth: 1
             },]
             
-    },
+        },
         options: {
             responsive: false,            
             scales: {
@@ -57,6 +68,11 @@ myApp.controller('ChartController', function(dataService) {
                 }]
             }
         }
-    });
+    })
+}
+// drawLineChart();
 });
+
+
+
 

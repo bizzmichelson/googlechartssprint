@@ -48,7 +48,7 @@ myApp.service('dataService', ['$http', '$location', function($http, $location) {
 
     // this.getEvents = function(eventId) {
     //     if (eventId !== undefined) {
-    //         $http.get("http://localhost:3000/posts").then(function (response){
+    //         $http.get("http://localhost:5000/chart").then(function (response){
     //             console.log("all events", response);
     //         })
     //     }
