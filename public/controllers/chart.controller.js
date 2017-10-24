@@ -57,6 +57,10 @@ var drawLineChart = function(resObj) {
             
         },
         options: {
+                legend: {
+                   display: false
+                },
+       
             responsive: false,            
             scales: {
                 yAxes: [{
