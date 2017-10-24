@@ -1,7 +1,7 @@
 myApp.controller('ChartController', function(dataService) {
     var vm = this;
     var resObj = [];
-    resObj.sort();
+    
     // var roots = numbers.map(Math.sqrt);
 
     // var fruit = ['cherries', 'apples', 'bananas'];
@@ -14,6 +14,10 @@ myApp.controller('ChartController', function(dataService) {
         // console.log("res.Obj", resObj);
         vm.resObj = response.data;  
         // return vm.resObj;
+        vm.resObj.sort(function(a,b){
+            return parseFloat(a.date)-parseFloat(b.date);
+        });        
+        console.log("vm.resObj", vm.resObj);           
         drawLineChart(resObj);
         console.log('vm.resObj', vm.resObj)
         })
@@ -26,7 +30,7 @@ var drawLineChart = function(resObj) {
            
         type: 'line',
         data: {
-            labels: [ [vm.resObj[0].description, vm.resObj[0].date], [vm.resObj[1].description,vm.resObj[1].date], [vm.resObj[2].description,vm.resObj[2].date]],                 
+            labels:[[vm.resObj[0].description, vm.resObj[0].date], [vm.resObj[1].description,vm.resObj[1].date], [vm.resObj[2].description,vm.resObj[2].date]],                 
             datasets: [
                 {
                 // label: '# of Votes',
