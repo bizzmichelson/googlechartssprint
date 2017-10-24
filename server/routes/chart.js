@@ -21,6 +21,25 @@ router.get('/', function(req, res) {
     });
   });
 
+  router.get('/', function(req, res) {
+    console.log("inside GET function");
+    pool.connect(function(err, client, done) {
+      if (err) {
+        res.sendStatus(500);
+      } else {
+        client.query("SELECT * FROM significant_event", function(err, resObj) {
+          // done();
+          if (err) {
+            res.sendStatus(500);
+          } else {
+            console.log(resObj.rows);
+            res.send(resObj.rows);
+          }
+        });
+      }
+    });
+  });
+
  
   
   module.exports = router;

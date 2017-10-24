@@ -2,10 +2,7 @@ myApp.controller('ChartController', function(dataService) {
     var vm = this;
     var resObj = [];
     
-    // var roots = numbers.map(Math.sqrt);
-
-    // var fruit = ['cherries', 'apples', 'bananas'];
-    // fruit.sort(); // ['apples', 'bananas', 'cherries']
+   
     console.log(dataService);
     
     console.log('in chart controller');
@@ -53,9 +50,9 @@ var drawLineChart = function(resObj) {
                     'rgba(255, 159, 64, 1)'
                 ],
                 borderWidth: 1
-            },]
-            
+            }],            
         },
+        
         options: {
                 legend: {
                    display: false
@@ -73,6 +70,7 @@ var drawLineChart = function(resObj) {
     })
 }
 });
+
 
 
 

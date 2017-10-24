@@ -44,6 +44,14 @@ myApp.service('dataService', ['$http', '$location', function($http, $location) {
         })
     }
 
+    // ds.getSigs = function() {
+    //     console.log();
+    //     return $http({
+    //         method: 'GET', 
+    //         url: '/api/charttwo',
+    //     })
+    // }
+
     // this.getEvents = function(eventId) {
     //     if (eventId !== undefined) {
     //         $http.get("http://localhost:5000/chart").then(function (response){
