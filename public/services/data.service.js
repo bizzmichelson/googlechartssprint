@@ -13,7 +13,7 @@ myApp.service('dataService', ['$http', '$location', function($http, $location) {
          }).then(function(response) {
             console.log('server response')
             console.log($location.path())
-            $location.path('/events') 
+            $location.path('/chart') 
             }).catch(function(error){
               console.error(error);
             });
@@ -21,19 +21,19 @@ myApp.service('dataService', ['$http', '$location', function($http, $location) {
      
      }
 
-     ds.postEvents = function(eventsObject) {
-         console.log(eventsObject);
-         $http({
-             method: 'POST', 
-             url: '/api/events',
-             data: eventsObject
-         }).then(function(response){
-            console.log($location.path())            
-            $location.path('/chart') 
-        }).catch(function(error){
-          console.error(error);
-        });
-     }
+    //  ds.postEvents = function(eventsObject) {
+    //      console.log(eventsObject);
+    //      $http({
+    //          method: 'POST', 
+    //          url: '/api/events',
+    //          data: eventsObject
+    //      }).then(function(response){
+    //         console.log($location.path())            
+    //         $location.path('/chart') 
+    //     }).catch(function(error){
+    //       console.error(error);
+    //     });
+    //  }
 
      // Maybe eventsObject should have a different name??? 
      ds.getEvents = function() {
@@ -52,13 +52,7 @@ myApp.service('dataService', ['$http', '$location', function($http, $location) {
     //     })
     // }
 
-    // this.getEvents = function(eventId) {
-    //     if (eventId !== undefined) {
-    //         $http.get("http://localhost:5000/chart").then(function (response){
-    //             console.log("all events", response);
-    //         })
-    //     }
-    // }
+ 
 
     }])
 
