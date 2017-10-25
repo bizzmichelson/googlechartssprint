@@ -4,7 +4,7 @@ var app = express();
 var port = process.env.PORT || 5000;
 var router = express.Router();
 var basics = require('./routes/basics');
-var events = require('./routes/events');
+var addEvents = require('./routes/addEvents');
 var chart = require('./routes/chart');
 var bodyParser = require('body-parser');
 
@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.use('/api/basics', basics);
-app.use('/api/events', events);
+app.use('/api/addEvents', addEvents);
 app.use('/api/chart', chart);
 
 

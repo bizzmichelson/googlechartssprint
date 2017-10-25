@@ -17,8 +17,20 @@ myApp.service('dataService', ['$http', '$location', function($http, $location) {
             }).catch(function(error){
               console.error(error);
             });
-          
-     
+
+   ds.postEvents = function(eventsObject) {
+        console.log(eventsObject);
+         $http({
+             method: 'POST',
+             url: '/api/addEvents',
+             data: eventsObject
+         }).then(function(response) {
+            console.log('server response')
+            console.log($location.path())
+            $location.path('/chart') 
+            }).catch(function(error){
+              console.error(error);
+            });            
      }
 
     //  ds.postEvents = function(eventsObject) {
@@ -53,8 +65,9 @@ myApp.service('dataService', ['$http', '$location', function($http, $location) {
     // }
 
  
+    }
+    }]);
 
-    }])
 
 
 
