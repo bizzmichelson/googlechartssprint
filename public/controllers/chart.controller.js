@@ -31,9 +31,20 @@ var drawLineChart = function(resObj) {
             labels:[[vm.resObj[0].description, vm.resObj[0].date], [vm.resObj[1].description,vm.resObj[1].date], [vm.resObj[2].description,vm.resObj[2].date]],                 
             datasets: [
                 {
+                    
                 // label: '# of Votes',
-                data: [vm.resObj[0].point_type, vm.resObj[1].point_type, vm.resObj[2].point_type],
+                data: 
+            //     vm.resObj.forEach(function () {
+            //         for(var i = 0; i < vm.resObj.length; i++){
+            //         return vm.resObj[i];
+            //     }
+            // });
+                
+                
+                [vm.resObj[0].point_type, vm.resObj[1].point_type, vm.resObj[2].point_type],
                 // label: ["born", "wedding"],
+                
+                
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',

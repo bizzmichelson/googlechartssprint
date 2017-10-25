@@ -17,6 +17,7 @@ myApp.service('dataService', ['$http', '$location', function($http, $location) {
             }).catch(function(error){
               console.error(error);
             });
+        }
 
    ds.postEvents = function(eventsObject) {
         console.log(eventsObject);
@@ -33,19 +34,6 @@ myApp.service('dataService', ['$http', '$location', function($http, $location) {
             });            
      }
 
-    //  ds.postEvents = function(eventsObject) {
-    //      console.log(eventsObject);
-    //      $http({
-    //          method: 'POST', 
-    //          url: '/api/events',
-    //          data: eventsObject
-    //      }).then(function(response){
-    //         console.log($location.path())            
-    //         $location.path('/chart') 
-    //     }).catch(function(error){
-    //       console.error(error);
-    //     });
-    //  }
 
      // Maybe eventsObject should have a different name??? 
      ds.getEvents = function() {
@@ -56,6 +44,28 @@ myApp.service('dataService', ['$http', '$location', function($http, $location) {
         })
     }
 
+
+    // vm.objForStuff = dataService.objForStuff;
+    // vm.dataService = dataService;
+    
+   
+    // console.log(dataService);
+    
+    // console.log('in chart controller');
+    // //should I add .getSigs here or try to retrieve significant events on getEvents?
+    //         vm.dataService.getEvents().then(function(response){
+    //         console.log(response.data);
+    //         // console.log("res.Obj", resObj);
+    //         vm.resObj = response.data;  
+    //         // return vm.resObj;
+    //         vm.resObj.sort(function(a,b){
+    //             return parseFloat(a.date)-parseFloat(b.date);
+    //         });        
+    //         console.log("vm.resObj", vm.resObj);           
+    //         drawLineChart(resObj);
+    //         console.log('vm.resObj', vm.resObj)
+    //         })
+
     // ds.getSigs = function() {
     //     console.log();
     //     return $http({
@@ -65,7 +75,6 @@ myApp.service('dataService', ['$http', '$location', function($http, $location) {
     // }
 
  
-    }
     }]);
 
 
