@@ -5,7 +5,7 @@ myApp.controller('ChartController', function(dataService) {
   console.log(dataService);
 
   console.log('in chart controller');
-  //should I add .getSigs here or try to retrieve significant events on getEvents?
+
   dataService.getEvents().then(function(response) {
     console.log(response.data);
     // console.log("res.Obj", resObj);
@@ -40,8 +40,6 @@ myApp.controller('ChartController', function(dataService) {
         datasets: [
           {
             data: pointTypes,
-
-            // [vm.resObj[0].point_type, vm.resObj[1].point_type, vm.resObj[2].point_type],
 
             backgroundColor: [
               'rgba(255, 99, 132, 0.2)',
