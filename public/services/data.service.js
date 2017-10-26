@@ -43,6 +43,22 @@ myApp.service('dataService', ['$http', '$location', function($http, $location) {
         })
     }
  
+    ds.deleteItems = function(id) { 
+        var sure = confirm("are you sure?");
+        if(sure) {
+        return $http({
+            type: "DELETE",
+            url: "/api/delete/" + id,
+            success: function(data) {
+              console.log("successfully deleted", id);
+              getEvents();
+            }
+          });
+        }else{
+          return;
+        }
+      }
+
     }]);
 
 
