@@ -35,7 +35,6 @@ myApp.service('dataService', ['$http', '$location', function($http, $location) {
      }
 
 
-     // Maybe eventsObject should have a different name??? 
      ds.getEvents = function() {
         console.log();
         return $http({
@@ -43,37 +42,6 @@ myApp.service('dataService', ['$http', '$location', function($http, $location) {
             url: '/api/chart',
         })
     }
-
-
-    // vm.objForStuff = dataService.objForStuff;
-    // vm.dataService = dataService;
-    
-   
-    // console.log(dataService);
-    
-    // console.log('in chart controller');
-    // //should I add .getSigs here or try to retrieve significant events on getEvents?
-    //         vm.dataService.getEvents().then(function(response){
-    //         console.log(response.data);
-    //         // console.log("res.Obj", resObj);
-    //         vm.resObj = response.data;  
-    //         // return vm.resObj;
-    //         vm.resObj.sort(function(a,b){
-    //             return parseFloat(a.date)-parseFloat(b.date);
-    //         });        
-    //         console.log("vm.resObj", vm.resObj);           
-    //         drawLineChart(resObj);
-    //         console.log('vm.resObj', vm.resObj)
-    //         })
-
-    // ds.getSigs = function() {
-    //     console.log();
-    //     return $http({
-    //         method: 'GET', 
-    //         url: '/api/charttwo',
-    //     })
-    // }
-
  
     }]);
 
