@@ -1,10 +1,18 @@
-<div class="page-header">
-        <h1>My Life Chart</h1>
-</div>
-<br><br><a class="btn btn-default" href="#!/options">Click to Add to/Delete Items from Chart</a></br>
-</br>
 
-<body onload="script();">
-        <canvas id="myChart" width="600px" height="600px"></canvas>
-        <script>
-        </script>
+<div class="page-header">
+                <h1>My Life Chart</h1>
+                <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Click to Add to/Delete Items from Chart
+                            <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                    <li><a href="#!/addHigh">Delete Events</a></li>
+                                    <li><a href="#!/addEvents">Add Events</a></li>
+                            </ul>
+        </div>
+        <!-- <br><br><a class="btn btn-default" href="#!/options">Click to Add to/Delete Items from Chart</a></br> -->
+        </br>
+        
+        <body onload="script();">
+                <canvas id="myChart" width="1000px" height="600px"></canvas>
+                <script>
+                </script>

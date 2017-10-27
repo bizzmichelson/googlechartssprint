@@ -61,13 +61,25 @@ myApp.controller('ChartController', function (dataService) {
       },
 
       options: {
+        
         legend: {
           display: false
         },
-
+          
         responsive: false,
         scales: {
+          gridLines : {
+            display : false
+          },
+          xAxes: [{
+            gridLines: {
+                display: false
+            }  
+        }],
           yAxes: [{
+            gridLines : {
+              display : false
+            },
             ticks: {
               beginAtZero: true
             }
