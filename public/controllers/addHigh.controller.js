@@ -1,46 +1,52 @@
-  myApp.controller('HighController', function($http, dataService) {
-    var vm = this;
-    var resObj = [];
-  
-    console.log(dataService);
-  
-    console.log('in high controller');
-  
-    dataService.getEvents().then(function(response) {
-      console.log(response.data);
-      // console.log("res.Obj", resObj);
-      vm.resObj = response.data;
-      // return vm.resObj;
-      vm.resObj.sort(function(a, b) {
-        return parseFloat(a.date) - parseFloat(b.date);
-      });
-      console.log('vm.resObj', vm.resObj);
-    });
+  myApp.controller('HighController', function ($http, dataService) {
+        var vm = this;
+        var resObj = [];
 
-    vm.clicker = function () {
-      console.log("inside clicker");
- 
-    dataService.deleteItems().then(function(response) {
-    console.log(response.data);
+        console.log(dataService);
 
-    vm.resObj = response.data;
+        console.log('in high controller');
 
-    vm.resObj.sort(function(a, b) {
-      return parseFloat(a.date) - parseFloat(b.date);
-    });
-    console.log('vm.resObj', vm.resObj);
-  });
+        dataService.getEvents().then(function (response) {
+          console.log(response.data);
+          // console.log("res.Obj", resObj);
+          vm.resObj = response.data;
+          // return vm.resObj;
 
-  var pointTypes =  newObj.map(function(object) {
-    return object.point_type;
-  });
+          vm.resObj.sort(function (a, b) {
+            return parseFloat(a.date) - parseFloat(b.date);
+          });
+          console.log('vm.resObj', vm.resObj);
+        });
 
-  var Labels =  newObj.map(function(object) {
-      return [object.description, object.date];
-    });
-}
-  
-});
+        vm.clicker = function (id) {
+          console.log("inside clicker");
 
+          dataService.deleteItems(id).then(function (response) {
+            console.log(response.data);
 
+            vm.resObj.splice(vm.resObj.findIndex(function (object){
+              return object.id === id;
+               }), 1)
+          });
 
+          // var pointTypes = vm.resObj.map(function (object) {
+          //     return object;
+
+              // vm.resObj.find(: id);
+
+              // function completeItems(id) {
+              //   var updatedItem;
+              //   for (var i = 0; i < tasks.length; i++) {
+              //     var taskItem = tasks[i];
+              //     if (taskItem.id === id) {
+              //       updatedItem = taskItem;
+              //       break;
+              //     }
+              //   }
+              //   updatedItem.complete = !updatedItem.complete;
+
+              // });
+
+          }
+
+        });

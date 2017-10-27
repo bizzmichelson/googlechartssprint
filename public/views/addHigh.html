@@ -1,15 +1,16 @@
 <h2> Click the item that you would like to delete below. </h2>
-        <div ng-repeat="resObj in gc.resObj" class="col-md-4">
-                <ul class="list-group">
-                        <div class="row justify-content-md-left">
-                                <div class="col col-lg-2">
-                <button ng-click="gc.clicker()" type="button" class="btn btn-default btn-sm">
+<div ng-repeat="resObj in gc.resObj" class="col-md-4">
+  <ul class="list-group">
+    <div class="row justify-content-md-left">
+      <div class="col col-lg-2">
+        <button ng-click="gc.clicker(resObj.id)" type="button" class="btn btn-default btn-sm">
                         <span class="glyphicon glyphicon-trash"></span> Delete
                 </button>
-                <li class="list-group-item">Description: {{resObj.description}}</li>
-                <li class="list-group-item">Date: {{resObj.date}}</li>
-                <li class="list-group-item">Rating: {{resObj.point_type}}</li>
-                </ul>
-                
-                <!-- <button class="btn btn-danger btn-xs" ng-click="gc.resObj(id)"> -->
-                 
+        <li class="list-group-item">Description: {{resObj.description}}</li>
+        <li class="list-group-item">Date: {{resObj.date}}</li>
+        <li class="list-group-item">Rating: {{resObj.point_type}}</li>
+              </div>
+            </div>
+  </ul>
+
+  <!-- <button class="btn btn-danger btn-xs" ng-click="gc.resObj(id)"> -->
