@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use('/api/basics', basics);
 app.use('/api/addEvents', addEvents);
 app.use('/api/chart', chart);
-app.use('/api/addHigh/:id', addHigh);
+app.use('/api/addHigh', addHigh);
 
 
 
