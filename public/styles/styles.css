@@ -1,7 +1,7 @@
 body{
     background-color: #fff;;
-    padding: 20px;
-    margin: 20px;
+    padding: 40px;
+    margin: 40px;
 }
 /* body {
     background-image: url("https://images.pexels.com/photos/156847/pexels-photo-156847.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb");   
@@ -58,7 +58,8 @@ h4{
     color: red;
 }
 .jumbotron{
-    padding: 40px;
+    padding: 8px;
+    font-size: 16px;
 }
 #myChart {
     background-color: white;
