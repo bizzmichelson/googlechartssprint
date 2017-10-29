@@ -1,10 +1,44 @@
 body{
-    background-color: rgb(194, 196, 198);
+    background-color: #fff;;
     padding: 20px;
     margin: 20px;
 }
-.home-div{
-    background-image: url("https://i.pinimg.com/736x/53/b6/75/53b67587ab52e79798f1b4f4223cfe8a--stone-paths-walkways.jpg");   
+/* body {
+    background-image: url("https://images.pexels.com/photos/156847/pexels-photo-156847.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb");   
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+} */
+#yes {
+    border: 5px solid white; 
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    padding: 15px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 10px 0;
+    color: gray;
+}
+input {
+    border: 5px solid white; 
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    padding: 15px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 10px 0;
 }
 
 h1 {
@@ -13,21 +47,21 @@ h1 {
 }
 
 h2{
-    color: navy;
+    color: green;
 }
 
 h3{
-    color: olive;
+    color: blue;
 }
 
 h4{
-    color: tomato;
+    color: red;
 }
 .jumbotron{
     padding: 40px;
 }
 #myChart {
-    background-color: lightcyan;
+    background-color: white;
 }
 /* .dropdown {
     float:right;
