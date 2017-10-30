@@ -1,28 +1,30 @@
 <form class="form-inline">
 
-                <section class="form-dark">
-        <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4">
-                <div class="card card-image">
-                <div class="md-form">                          
-                        <div class="page-header">
-                                <h1> Let's begin with some questions.</h1>
-                        </div>
-                        <h2> When were you born? </h2>
-                        <div class="md-form">
-                                <section id="inputArea" class="card card-image">
-                                        <input id="born" ng-model="bc.input.born" type="text" placeholder="year">
-                                        <h3> What was the happiest time of your life?</h3>
-                                        <input id="basicHighDescription" ng-model="bc.input.basicHighDesc" type="text" placeholder="description">
-                                        <input id="basicHighYear" ng-model="bc.input.basicHighYear" type="text" placeholder="year">
-                                        <h4> What was the worst time of your life?</h4>
-                                        <input id="basicLowDescription" ng-model="bc.input.basicLowDesc" type="text" placeholder="description">
-                                        <input id="basicLowYear" ng-model="bc.input.basicLowYear" type="text" placeholder="year">
-                                        <br><br><button class="btn btn-default" ng-disabled="bc.input == undefined" ng-click="bc.click()">submit</button></br>
-                                        </br>
+        <section class="form-dark">
+                <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4">
+                        <div class="card card-image">
+                                <div class="md-form">
+                                        <div class="page-header">
+                                                <h1> Let's begin with some questions.</h1>
+                                        </div>
+                                        <section id="inputArea" class="card card-image">
+                                                <h2> When were you born? </h2>
+                                                <div class="md-form">
+
+                                                        <input id="born" ng-model="bc.input.born" type="text" placeholder="year">
+                                                        <h3> What was the happiest time of your life?</h3>
+                                                        <input id="basicHighDescription" ng-model="bc.input.basicHighDesc" type="text" placeholder="description">
+                                                        <input id="basicHighYear" ng-model="bc.input.basicHighYear" type="text" placeholder="year">
+                                                        <h4> What was the worst time of your life?</h4>
+                                                        <input id="basicLowDescription" ng-model="bc.input.basicLowDesc" type="text" placeholder="description">
+                                                        <input id="basicLowYear" ng-model="bc.input.basicLowYear" type="text" placeholder="year">
+                                                        <br><br><button class="btn btn-success" ng-disabled="bc.input == undefined"
+                                                                ng-click="bc.click()">Submit</button></br>
+                                                        </br>
+                                                </div>
                                 </div>
                         </div>
                 </div>
-        </div>
+                </section>
         </section>
-</section>
 </form>

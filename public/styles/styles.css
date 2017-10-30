@@ -2,13 +2,14 @@ body{
     background-color: #fff;;
     padding: 40px;
     margin: 40px;
-}
-/* body {
     background-image: url("https://images.pexels.com/photos/156847/pexels-photo-156847.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb");   
     background-repeat: no-repeat;
+    height: 100%; 
+    width: 100%;
+    background-size: cover;    
     background-attachment: fixed;
-    background-position: center; 
-} */
+    background-position: center;
+}
 #yes {
     border: 5px solid white; 
     -webkit-box-shadow: 
@@ -58,12 +59,27 @@ h4{
     color: red;
 }
 .jumbotron{
-    padding: 8px;
+    padding: 20px;
     font-size: 16px;
+    color: green;
 }
 #myChart {
-    background-color: white;
+    background-color: black;
+    /* margin: 20px; */
+    padding: 20px;
 }
+#inputArea {
+    background: lightgray;
+    padding: 20px;
+}
+
+/* .list-group{
+    margin: 50px;
+} */
+/* #btn btn-secondary {
+    margin: 13px 12px 12px 10px;
+
+} */
 /* .dropdown {
     float:right;
 } */

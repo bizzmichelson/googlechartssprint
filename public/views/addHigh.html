@@ -1,17 +1,20 @@
-<h2> Click the item that you would like to delete below. </h2>
-<br><br><a class="btn btn-default" href="#!/chart">Return to Chart</a>
-</br></br>        
-<br><br></br></br>
+<h1> Click the item that you would like to delete below. </h1>
+<br><br><a class="btn btn-success" href="#!/chart">Return to Chart</a>
+</br>
+</br>
+<br><br></br>
+</br>
 <div ng-repeat="resObj in gc.resObj" class="col-md-4">
   <ul class="list-group">
-    <!-- <div class="row justify-content-md-left"> -->
-      <div class="col col-lg-2">
-        <button ng-click="gc.clicker(resObj.id)" type="button" class="btn btn-secondary">
+    <div class="col col-lg-2">
+      <button ng-click="gc.clicker(resObj.id)" type="button" class="btn btn-secondary">
               <span class="glyphicon glyphicon-trash"></span> Delete      
         <li class="list-group-item">Description: {{resObj.description}}</li>
         <li class="list-group-item">Date: {{resObj.date}}</li>
         <li class="list-group-item">Rating: {{resObj.point_type}}</li>
-              </div>
+        </button>
+        <br><br><br>
+    </div>
   </ul>
-  
 
+  
