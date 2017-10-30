@@ -1,6 +1,5 @@
 <div class="page-header"><h1> Add your significant event below. </h1></div>
         <section id="inputArea">
-                <!-- <input id="date" type="text" placeholder="date">  -->
                 <select name="rating" placeholder="Rate your event"id="yes" ng-model="ac.input.sigEventRating">   
                 <option value="" disabled selected>Rate your event</option>                             
                 <option value="-10">-10</option>
@@ -25,7 +24,7 @@
                 <option value="9">9</option>  
                 <option value="10">10</option> 
                 </select>   
-                <input id="description" ng-model="ac.input.sigEventDesc" type="text" placeholder="description">
-                <input id="date" ng-model="ac.input.sigEventYear"type="text" placeholder="year">
+                <input id="description" ng-model="ac.input.sigEventDesc" type="text" placeholder="Description">
+                <input id="date" ng-model="ac.input.sigEventYear"type="text" placeholder="Year">
         <br><br><button class="btn btn-success" ng-click="ac.clicky()">Submit</button></br></br>   
 </section>
