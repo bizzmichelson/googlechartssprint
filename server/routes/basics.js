@@ -2,6 +2,7 @@ var express = require("express");
 var router = express.Router();
 var pool = require("../../public/modules/pool.js");
 
+
   router.post("/", function(req, res) {
   
     // pool.connect
@@ -12,7 +13,7 @@ var pool = require("../../public/modules/pool.js");
         res.sendStatus(500);
       } else {
         // client.query
-        client.query("INSERT INTO dynamic (point_type, description, date) VALUES ('born', $1, null), ('high', $2, $3), ('low', $4, $5);", [req.body.born, req.body.basicHighDesc, req.body.basicHighYear, req.body.basicLowDesc, req.body.basicLowYear], function(
+        client.query("INSERT INTO dynamic (point_type, description, date) VALUES (0, 'Born', $1), (10, $2, $3), (-10, $4, $5);", [req.body.born, req.body.basicHighDesc, req.body.basicHighYear, req.body.basicLowDesc, req.body.basicLowYear], function(
           queryError,
           result
         ) {

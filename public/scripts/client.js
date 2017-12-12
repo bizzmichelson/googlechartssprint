@@ -19,7 +19,7 @@ myApp.config(function($routeProvider) {
         controller: 'OptionsController as oc'
     }).when('/addHigh', {
         templateUrl: 'views/addHigh.html',
-        controller: 'HighController as hc'
+        controller: 'HighController as gc'
     }).when('/addLow', {
         templateUrl: 'views/addLow.html',
         controller: 'LowController as lc'

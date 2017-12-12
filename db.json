@@ -1,0 +1,34 @@
+{
+    "posts": [
+        {
+        "id": 1,
+        "point_type": "high",
+        "description": "cool stuff",
+        "year": 2000
+        },
+        {
+            "id": 1,
+            "point_type": "high",
+            "description": "cool stuff",
+            "year": 2005
+            },
+        {
+            "id": 2,
+            "point_type": "low",
+            "description": "cool stuff",
+            "year": 2010
+            },
+        {
+            "id": 3,
+            "point_type": "high",
+            "description": "cool stuff",
+            "year": 2015
+            },
+        {
+            "id": 4,
+            "point_type": "low",
+            "description": "cool stuff",
+            "year": 2020
+            }
+        ]
+}

@@ -1,6 +1,6 @@
-CREATE TABLE todo (
+CREATE TABLE dynamic(
     id SERIAL PRIMARY KEY,
-    task varchar(200),
-	complete boolean DEFAULT false
+	point_type INT,
+    date INT,
+	description VARCHAR(200)
 );
-INSERT INTO todo(task,complete) VALUES('brush teeth',false);

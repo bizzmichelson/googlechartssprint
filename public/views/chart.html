@@ -1,6 +1,15 @@
-        <div class="page-header"><h1>Chart Spike</h1></div>
-        <br><br><button><a href="/#!options">Click to Add to Chart</a></button></br></br>             
-        <div><canvas id="myChart" width="600px" height="600px"></canvas></div>          
-        <script>          
-        </script>
-        
+<div class="page-header">
+        <h1>My Life Chart</h1>
+</div>
+        <div class="dropdown">
+                <button class="btn btn-success dropdown-toggle" style="float: center" type="button" data-toggle="dropdown">Click to add to / delete items from chart
+                            <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                        <li><a href="#!/addHigh">Delete Events</a></li>
+                        <li><a href="#!/addEvents">Add Events</a></li>
+                </ul>
+        </div>
+        </br>
+        <body onload="script();">
+                <canvas id="myChart" width="1300px" height="500px"></canvas>
+              

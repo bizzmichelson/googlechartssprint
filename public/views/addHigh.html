@@ -1,6 +1,20 @@
-<div class="page-header"><h1> Add your high point below. </h1></div>
-        <section id="inputArea">
-                <input id="description" type="text" placeholder="description">
-                <input id="date" type="text" placeholder="date">
-            </section>
-        <br><br><button><a href="/#!chart">submit</a></button></br></br> 
+<h1> Click the item that you would like to delete below. </h1>
+<br><br><a class="btn btn-success" href="#!/chart">Return to Chart</a>
+</br>
+</br>
+<br><br></br>
+</br>
+<div ng-repeat="resObj in gc.resObj" class="col-md-4">
+  <ul class="list-group">
+    <div class="col col-lg-2">
+      <button ng-click="gc.clicker(resObj.id)" type="button" class="btn btn-secondary">
+              <span class="glyphicon glyphicon-trash"></span> Delete      
+        <li class="list-group-item">Description: {{resObj.description}}</li>
+        <li class="list-group-item">Date: {{resObj.date}}</li>
+        <li class="list-group-item">Rating: {{resObj.point_type}}</li>
+        </button>
+        <br><br>
+    </div>
+  </ul>
+
+  
