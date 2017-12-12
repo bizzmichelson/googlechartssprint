@@ -29,24 +29,6 @@
                }), 1)
           });
 
-          // var pointTypes = vm.resObj.map(function (object) {
-          //     return object;
-
-              // vm.resObj.find(: id);
-
-              // function completeItems(id) {
-              //   var updatedItem;
-              //   for (var i = 0; i < tasks.length; i++) {
-              //     var taskItem = tasks[i];
-              //     if (taskItem.id === id) {
-              //       updatedItem = taskItem;
-              //       break;
-              //     }
-              //   }
-              //   updatedItem.complete = !updatedItem.complete;
-
-              // });
-
           }
 
         });

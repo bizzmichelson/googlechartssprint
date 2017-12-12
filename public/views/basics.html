@@ -10,18 +10,19 @@
                                         <section id="inputArea" class="card card-image">
                                                 <h2> When were you born? </h2>
                                                 <div class="md-form">
-                                                        <input id="born" ng-model="bc.input.born" type="text" placeholder="Year">
+                                                        <input id="born" ng-model="bc.input.born" type="number" placeholder="Year" required>
                                                         <h3> What was the happiest time of your life?</h3>
                                                         <input id="basicHighDescription" ng-model="bc.input.basicHighDesc" type="text" placeholder="Description">
-                                                        <input id="basicHighYear" ng-model="bc.input.basicHighYear" type="text" placeholder="Year">
+                                                        <input id="basicHighYear" ng-model="bc.input.basicHighYear" type="number" placeholder="Year">
                                                         <h4> What was the worst time of your life?</h4>
                                                         <input id="basicLowDescription" ng-model="bc.input.basicLowDesc" type="text" placeholder="Description">
-                                                        <input id="basicLowYear" ng-model="bc.input.basicLowYear" type="text" placeholder="Year">
-                                                        <br><br><button class="btn btn-success" ng-disabled="bc.input == undefined"
+                                                        <input id="basicLowYear" ng-model="bc.input.basicLowYear" type="number" placeholder="Year">
+                                                        <br><br><button class="btn btn-success" 
                                                                 ng-click="bc.click()">Submit</button></br>
                                                         </br>
                                                 </div>
                                 </div>
+                                <!-- ng-disabled="bc.input == undefined" -->
                         </div>
                 </div>
                 </section>
