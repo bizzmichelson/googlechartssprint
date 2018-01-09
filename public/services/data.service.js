@@ -48,7 +48,7 @@ myApp.service('dataService', ['$http', '$location', function ($http, $location) 
         if (sure) {
             return $http({
                 method: "DELETE",
-                url: "/api/addHigh/" + id,
+                url: "/api/deleteItem/" + id,
             })
         }
     }

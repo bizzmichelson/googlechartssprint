@@ -17,12 +17,12 @@ myApp.config(function($routeProvider) {
     }).when('/options', {
         templateUrl: 'views/options.html',
         controller: 'OptionsController as oc'
-    }).when('/addHigh', {
-        templateUrl: 'views/addHigh.html',
+    }).when('/deleteItem', {
+        templateUrl: 'views/deleteItem.html',
         controller: 'HighController as gc'
-    }).when('/addLow', {
-        templateUrl: 'views/addLow.html',
-        controller: 'LowController as lc'
+    // }).when('/addLow', {
+    //     templateUrl: 'views/addLow.html',
+    //     controller: 'LowController as lc'
     }).when('/addEvents', {
         templateUrl: 'views/addEvents.html',
         controller: 'addEventsController as ac'
